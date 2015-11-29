@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{461F4F21-F579-4B51-B747-07691E23DFAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>hosp</RootNamespace>
+    <AssemblyName>hosp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>H:\oracle_11g\ODAC121021Xcopy_x64\odp.net4\odp.net\managed\common\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="acc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="acc.Designer.cs">
+      <DependentUpon>acc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="activate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="activate.Designer.cs">
+      <DependentUpon>activate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adddept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adddept.Designer.cs">
+      <DependentUpon>adddept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adddoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adddoc.Designer.cs">
+      <DependentUpon>adddoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addpaatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addpaatient.Designer.cs">
+      <DependentUpon>addpaatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_dignose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_dignose.Designer.cs">
+      <DependentUpon>add_dignose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="allbillacc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="allbillacc.Designer.cs">
+      <DependentUpon>allbillacc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="allemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="allemp.Designer.cs">
+      <DependentUpon>allemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bill.Designer.cs">
+      <DependentUpon>bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changepass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changepass.Designer.cs">
+      <DependentUpon>changepass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dailyreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dailyreport.Designer.cs">
+      <DependentUpon>dailyreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deactivatedoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deactivatedoctor.Designer.cs">
+      <DependentUpon>deactivatedoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp.Designer.cs">
+      <DependentUpon>emp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doctor.Designer.cs">
+      <DependentUpon>doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainform.Designer.cs">
+      <DependentUpon>mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="master.Designer.cs">
+      <DependentUpon>master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="today_pat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="today_pat.Designer.cs">
+      <DependentUpon>today_pat.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="acc.resx">
+      <DependentUpon>acc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="activate.resx">
+      <DependentUpon>activate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adddept.resx">
+      <DependentUpon>adddept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adddoc.resx">
+      <DependentUpon>adddoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addpaatient.resx">
+      <DependentUpon>addpaatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_dignose.resx">
+      <DependentUpon>add_dignose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="allbillacc.resx">
+      <DependentUpon>allbillacc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="allemp.resx">
+      <DependentUpon>allemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bill.resx">
+      <DependentUpon>bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepass.resx">
+      <DependentUpon>changepass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dailyreport.resx">
+      <DependentUpon>dailyreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deactivatedoctor.resx">
+      <DependentUpon>deactivatedoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp.resx">
+      <DependentUpon>emp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doctor.resx">
+      <DependentUpon>doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform.resx">
+      <DependentUpon>mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="master.resx">
+      <DependentUpon>master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="today_pat.resx">
+      <DependentUpon>today_pat.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgs\5.png" />
+    <Content Include="imgs\healthcare.jpg" />
+    <Content Include="imgs\hospital9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="docimgs\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
