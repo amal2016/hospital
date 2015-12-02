@@ -74,11 +74,7 @@ namespace hosp
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-          
-        }
+      
 
         private void IDTXT_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -191,21 +187,27 @@ namespace hosp
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void cmonth_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            openpic.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
-            //Showing the fileopen dialog box
-            openpic.ShowDialog();
-            //showing the image opened in the picturebox
-            pictureBox1.BackgroundImage = new Bitmap(openpic.FileName);
-            //storing the location of the pic in variable
-            location = openpic.FileName;
-        imgtxt.Text = location;
+            cday.Items.Clear();
+            if (cmonth.Text == "2") //feb month
+            {
+
+                for (int i = 1; i < 30; i++)
+                {
+                    cday.Items.Add(i.ToString());
+                }
+            }
+            else
+            {
+
+                for (int i = 1; i < 32; i++)
+                {
+                    cday.Items.Add(i.ToString());
+                }
+            }
         }
 
        
