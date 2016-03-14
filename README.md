@@ -6,4 +6,7 @@ tools: c sharp and oracle
 to run it
 
 run script of database first
-and change datasource name and password to yours
+and in app.config file
+
+
+change datasource name and password to yours
