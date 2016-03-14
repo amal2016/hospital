@@ -1,0 +1,145 @@
+
+Database design for hospital
+//
+Patient table
+create table patient(pid number(15) primary key,
+fname nvarchar2(25),
+lname nvarchar2(25),
+gender nvarchar2(25),
+paddress varchar2(55),
+mobile varchar2(25),
+pdob date)
+
+//department table
+
+create table department(deptid number(9)  primary key,
+deptname nvarchar2(50),
+description nvarchar2(100))
+
+//doctor table 
+create table doctor(docid varchar2(50) primary key,
+dfname nvarchar2(50),
+dlname nvarchar2(50),
+lgender nvarchar2(25),
+daddress nvarchar2(50)
+dmobile varchar2(25),
+ddegree nvarchar2(50),
+degreedate date,
+joindate date default sysdate,
+password varchar2(50),
+demail varchar2(50),
+,deptid number(9) ,status varchar2(50) default ‘active’,
+ FOREIGN KEY (deptid) 
+        REFERENCES department(deptid)
+        ON DELETE CASCADE)
+
+//Bill table
+create table bill(billno number(9) primary key,
+patientid number(9),
+billdate date default sysdate,
+deptid number(9),
+amount number(9),
+addedby nvarchar2(25) ,foreign key (addedby) references employee(eid)
+FOREIGN KEY (deptid) 
+        REFERENCES department(deptid)
+        ON DELETE CASCADE
+
+,FOREIGN KEY (patientid) 
+        REFERENCES patient(pid)
+        ON DELETE CASCADE)
+//Dignostic table
+create table dignostic(digid number(9),patientid number(9),drid varchar2(50),digdate date default sysdate,
+remark nvarchar2(50),
+notes nvarchar2(50)
+,FOREIGN KEY (drid) 
+        REFERENCES doctor(docid)
+        ON DELETE CASCADE
+
+,FOREIGN KEY (patientid) 
+        REFERENCES patient(pid)
+        ON DELETE CASCADE)
+
+//employee table
+create table employee(eid number(9) primary key,sfname nvarchar2(50),slname nvarchar2(50),
+dob date,saddress nvarchar2(50),smobile number(9),deptid number(9),
+joindate date,
+password varchar2(50),eemail varchar2(50),
+FOREIGN KEY (deptid) REFERENCEs department(deptid) on delete cascade)
+sequence  id
+  create sequence  id
+    start with 1 
+    increment by 1 
+    nomaxvalue;
+
+//procedure to insert into patient table
+CREATE OR REPLACE PROCEDURE pat_insrt
+(id IN NUMBER,
+fn IN VARCHAR2,
+NA IN VARCHAR2,
+GN in VARCHAR2,
+ad in VARCHAR2,
+mob in varchar2,
+db in date)
+AS
+BEGIN
+INSERT INTO patient(pid,fname,lname,gender,PADDRESS,mobile,pdob) VALUES(id,fn,NA,gn,ad,mob,db);
+commit;
+
+END;
+
+//PROCEDURE INSERT IN DOCTOR
+CREATE OR REPLACE PROCEDURE doc_insrt
+(df IN VARCHAR2,
+dl IN VARCHAR2,
+gn IN VARCHAR2,
+ad in VARCHAR2,
+did in NUMBER,
+mob in varchar2, 
+dg in varchar2,
+dgd in date,
+jd in date,
+pass in varchar2,
+id in number ,
+dob in date)
+AS
+BEGIN
+INSERT INTO doctor(dfname,dlname,lgender,daddress,deptid,dmobile,ddegree,degreedate,joindate,password,docid,dob)VALUES(df,dl,gn,ad,did,mob,dg,dgd,jd,pass,id,dob);
+ 
+commit;
+
+END;
+
+//Procedure to insert department
+CREATE OR REPLACE PROCEDURE dept_insrt
+(id IN number,
+ns IN VARCHAR2,
+des IN VARCHAR2
+)
+AS
+BEGIN
+INSERT INTO department(deptid,deptname,description)VALUES(id,ns,des);
+ 
+commit;
+
+END;
+//Procedure to insert  employee
+CREATE OR REPLACE PROCEDURE emp_insrt
+(d IN number,
+fn IN VARCHAR2,
+lm IN VARCHAR2,
+db in date,
+sd in varchar2,
+sm in varchar2, 
+dbt in number,
+jd in date,
+pass in varchar2,
+em in varchar2,
+gnd in varchar2)
+
+AS
+BEGIN
+INSERT INTO employee(eid,sfname,slname,dob,saddress,smobile,deptid,joindate,password,eemail,gender)VALUES(d,fn,lm,db,sd,sm,dbt,jd,pass,em,gnd);
+commit;
+END;
+
+
